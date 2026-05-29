@@ -19,13 +19,16 @@ class GUID(TypeDecorator):
         return uuid.UUID(value)
 
 
-engine = create_engine(
-    settings.DATABASE_URL,
-    connect_args={"check_same_thread": False} if "sqlite" in settings.DATABASE_URL else {},
-    pool_size=10,
-    max_overflow=20,
-    pool_pre_ping=True,
-)
+_is_sqlite = "sqlite" in settings.DATABASE_URL
+_engine_kwargs: dict = {"pool_pre_ping": True}
+if _is_sqlite:
+    _engine_kwargs["connect_args"] = {"check_same_thread": False}
+else:
+    # QueuePool settings — only valid for server-backed databases
+    _engine_kwargs["pool_size"] = 10
+    _engine_kwargs["max_overflow"] = 20
+
+engine = create_engine(settings.DATABASE_URL, **_engine_kwargs)
 
 
 @event.listens_for(engine, "connect")

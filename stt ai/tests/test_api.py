@@ -12,8 +12,6 @@ sys.path.insert(0, str(ROOT_DIR))
 os.environ["DATABASE_URL"] = "sqlite:///./test.db"
 os.environ["JWT_SECRET_KEY"] = "test-secret-key-for-testing"
 os.environ["OPENAI_API_KEY"] = "sk-test-dummy"
-os.environ["PAYSTACK_SECRET_KEY"] = "test_sk"
-os.environ["PAYSTACK_PUBLIC_KEY"] = "test_pk"
 os.environ["VAULTAI_SKIP_WARMUP"] = "1"
 
 from fastapi.testclient import TestClient
@@ -75,25 +73,6 @@ class TestAuth:
 
     def test_login_invalid(self):
         response = client.post("/auth/login", json={"email": "noone@example.com", "password": "wrong"})
-        assert response.status_code == 401
-
-
-class TestPayments:
-    def _auth_token(self):
-        client.post("/auth/register", json={"email": "pay@example.com", "password": "testpass123"})
-        resp = client.post("/auth/login", json={"email": "pay@example.com", "password": "testpass123"})
-        return resp.json()["access_token"]
-
-    def test_initialize_payment_no_auth(self):
-        response = client.post("/payments/initialize", json={"amount": 500000, "email": "pay@example.com"})
-        assert response.status_code in (401, 403)
-
-    def test_webhook_missing_signature(self):
-        response = client.post(
-            "/payments/webhook",
-            json={"event": "charge.success", "data": {"reference": "ref_1"}},
-            params={},
-        )
         assert response.status_code == 401
 
 

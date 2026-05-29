@@ -1,0 +1,60 @@
+# Study Notes
+
+## International Law of the Sea
+
+### Introduction
+The discussion centers on the evolution of international law concerning the oceans, specifically the United Nations Convention on the Law of the Sea (UNCLOS). 
+
+### Historical Context
+- Historically, the use of ocean resources was governed by customary laws and practices, often leading to conflicts.
+- The need for a structured legal framework arose, leading to international discussions.
+
+### Key Developments
+- In **1958**, three nations convened to discuss the law of the sea, resulting in the first significant treaty. This was a precursor to more comprehensive agreements.
+- The **United Nations Convention on the Law of the Sea** (UNCLOS) was initiated in **1973** and concluded in **1982**. It took nearly a decade to negotiate due to the complexities involved in reaching a consensus among nations.
+
+### Ratification and Implementation
+- The convention was signed on **December 10, 1982**, in Jamaica.
+- It became binding after **68 countries** ratified it, with **Guyana** being the last to do so in **1994**.
+- The convention establishes a comprehensive regime governing the use of the world's oceans, including rights and responsibilities of nations.
+
+### Key Components of UNCLOS
+1. **Maritime Zones**: 
+   - **Internal Waters**: Waters landward of the baseline, subject to the laws of the coastal state.
+   - **Territorial Sea**: Extends **12 nautical miles** from the baseline, where the coastal state has sovereignty.
+   - **Contiguous Zone**: Extends **24 nautical miles** from the baseline, allowing states to enforce laws concerning customs, immigration, and pollution.
+   - **Exclusive Economic Zone (EEZ)**: Extends **200 nautical miles** from the baseline, granting states rights to exploit marine resources.
+
+2. **Continental Shelf**: 
+   - Defined as the natural prolongation of a state's land territory to the outer edge of the continental margin, not exceeding **350 nautical miles** from the baseline.
+
+3. **Dispute Resolution**: 
+   - Disputes between nations regarding maritime boundaries are to be resolved through the **International Court of Justice** or the **International Tribunal for the Law of the Sea**.
+
+### Importance of Baselines
+- The baseline is critical for measuring maritime zones. It is typically the low-water line along the coast.
+- Proper definition of baselines is essential to avoid territorial disputes.
+
+### Case Studies
+- The discussion included examples of disputes, such as between Nigeria and Cameroon over maritime boundaries, highlighting the importance of joint development zones to prevent conflict.
+
+### Conclusion
+- The UNCLOS framework is vital for maintaining order and resolving disputes in international waters. Understanding the components and implications of this law is crucial for nations to navigate their rights and responsibilities effectively.
+
+---
+
+### --- SUMMARY & KEY POINTS ---
+
+#### Summary
+The session provided an overview of the evolution of international law governing the seas, focusing on the United Nations Convention on the Law of the Sea (UNCLOS). It highlighted historical developments, key components of the law, and the importance of defining maritime boundaries.
+
+#### Key Takeaways
+- The UNCLOS was established to create a comprehensive legal framework for the world's oceans.
+- Key maritime zones include internal waters, territorial sea, contiguous zone, and exclusive economic zone.
+- The baseline is crucial for determining maritime boundaries and rights.
+- Disputes over maritime boundaries are to be resolved through international legal mechanisms.
+
+#### Action Items or Questions Raised
+- Review the key components of UNCLOS and their implications for maritime law.
+- Consider the importance of joint development zones in preventing conflicts over maritime resources.
+- Explore case studies of maritime disputes to understand practical applications of UNCLOS.

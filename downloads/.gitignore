@@ -1,0 +1,5 @@
+recording.m4a
+transcript.txt
+__pycache__/
+*.pyc
+*.pyo
