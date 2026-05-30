@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div id="app">
+    <div class="header">
+      <h1>VaultAI</h1>
+      <span class="badge">v2.1</span>
+    </div>
+
+    <div id="login-view" class="view hidden">
+      <h2>Sign In</h2>
+      <form id="login-form">
+        <input type="email" id="login-email" placeholder="Email" required>
+        <input type="password" id="login-password" placeholder="Password" required>
+        <button type="submit" class="btn primary">Sign In</button>
+      </form>
+      <p class="switch-link">Don't have an account? <a href="#" id="show-register">Register</a></p>
+    </div>
+
+    <div id="register-view" class="view hidden">
+      <h2>Register</h2>
+      <form id="register-form">
+        <input type="email" id="register-email" placeholder="Email" required>
+        <input type="password" id="register-password" placeholder="Password" required>
+        <button type="submit" class="btn primary">Create Account</button>
+      </form>
+      <p class="switch-link">Already have an account? <a href="#" id="show-login">Sign In</a></p>
+    </div>
+
+    <div id="main-view" class="view hidden">
+      <div class="tabs">
+        <button class="tab active" data-tab="upload">Upload</button>
+        <button class="tab" data-tab="url">URL</button>
+        <button class="tab" data-tab="recent">Recent</button>
+      </div>
+
+      <div id="tab-upload" class="tab-content active">
+        <p class="hint">Upload an audio file for AI transcription and analysis</p>
+        <div class="upload-zone" id="upload-zone">
+          <span class="upload-icon">+</span>
+          <p>Click to select audio file</p>
+          <p class="small">MP3, WAV, M4A, FLAC, OGG (up to 200MB)</p>
+          <input type="file" id="file-input" accept="audio/*" hidden>
+        </div>
+        <div id="upload-progress" class="hidden">
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+          <p id="upload-status" class="small">Uploading...</p>
+        </div>
+      </div>
+
+      <div id="tab-url" class="tab-content">
+        <p class="hint">Submit a YouTube/Social media URL for transcription</p>
+        <form id="url-form">
+          <input type="url" id="url-input" placeholder="https://youtube.com/watch?v=..." required>
+          <button type="submit" class="btn primary full">Transcribe</button>
+        </form>
+        <div id="url-result" class="hidden"></div>
+      </div>
+
+      <div id="tab-recent" class="tab-content">
+        <p class="hint">Your recent vaults</p>
+        <div id="recent-list"><p class="small muted">Loading...</p></div>
+      </div>
+
+      <div class="footer-actions">
+        <button class="btn secondary" id="open-dashboard">Dashboard</button>
+        <button class="btn secondary" id="open-sidepanel">Side Panel</button>
+        <button class="btn subtle" id="logout-btn">Logout</button>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

@@ -10,7 +10,8 @@ def download_audio(url: str, output_dir: str) -> tuple[str, str]:
     out_dir = os.path.join(output_dir, temp_id)
     os.makedirs(out_dir, exist_ok=True)
 
-    output_template = os.path.join(out_dir, "%(title)s.%(ext)s")
+    safe_name = f"audio_{temp_id}"
+    output_template = os.path.join(out_dir, f"{safe_name}.%(ext)s")
 
     ydl_opts = {
         "format": "bestaudio/best",

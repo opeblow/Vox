@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="dashboard.css">
+  <title>VaultAI Dashboard</title>
+</head>
+<body>
+  <div id="app">
+    <nav class="sidebar">
+      <div class="nav-header">
+        <h1>VaultAI</h1>
+        <span class="badge">v2.1</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#" data-view="vaults" class="active">Vaults</a></li>
+        <li><a href="#" data-view="upload">Upload</a></li>
+        <li><a href="#" data-view="jobs">Jobs</a></li>
+      </ul>
+      <div class="nav-footer">
+        <span id="nav-email" class="muted"></span>
+        <button id="logout-btn" class="btn subtle">Logout</button>
+      </div>
+    </nav>
+
+    <main class="main">
+      <div id="view-vaults" class="view active">
+        <div class="view-header">
+          <h2>Vaults</h2>
+          <input type="text" id="vault-search" placeholder="Search vaults..." class="search-input">
+        </div>
+        <div id="vaults-grid" class="vaults-grid">
+          <p class="muted">Loading vaults...</p>
+        </div>
+      </div>
+
+      <div id="view-vault-detail" class="view hidden">
+        <button id="back-to-vaults" class="btn subtle">&larr; Back to vaults</button>
+        <div id="vault-detail-content"></div>
+      </div>
+
+      <div id="view-upload" class="view hidden">
+        <div class="view-header">
+          <h2>Upload Audio</h2>
+        </div>
+        <div class="upload-section">
+          <div class="upload-card">
+            <h3>Upload File</h3>
+            <div class="upload-zone" id="upload-zone">
+              <p>Drop audio file here or click to browse</p>
+              <p class="small muted">MP3, WAV, M4A, FLAC, OGG (up to 200MB)</p>
+              <input type="file" id="file-input" accept="audio/*" hidden>
+            </div>
+            <div id="upload-progress" class="hidden">
+              <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+              <p id="upload-status" class="small"></p>
+            </div>
+          </div>
+          <div class="upload-card">
+            <h3>From URL</h3>
+            <p class="small muted">YouTube, Twitter/X, Instagram, or direct audio URL</p>
+            <form id="url-form">
+              <input type="url" id="url-input" placeholder="https://..." required>
+              <button type="submit" class="btn primary">Transcribe URL</button>
+            </form>
+            <div id="url-result" class="hidden"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="view-jobs" class="view hidden">
+        <div class="view-header">
+          <h2>Processing Jobs</h2>
+        </div>
+        <div id="jobs-list">
+          <p class="muted">Loading jobs...</p>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="dashboard.js"></script>
+</body>
+</html>

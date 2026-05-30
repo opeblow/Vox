@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="panel.css">
+</head>
+<body>
+  <div id="app">
+    <div class="header">
+      <h1>VaultAI</h1>
+      <span class="badge">Live</span>
+    </div>
+
+    <div id="login-view" class="view hidden">
+      <h2>Sign In to VaultAI</h2>
+      <form id="login-form">
+        <input type="email" id="login-email" placeholder="Email" required>
+        <input type="password" id="login-password" placeholder="Password" required>
+        <button type="submit" class="btn primary">Sign In</button>
+      </form>
+    </div>
+
+    <div id="connect-view" class="view">
+      <p class="hint">Enter a Podcast ID to view the live transcript</p>
+      <form id="connect-form">
+        <input type="text" id="podcast-id" placeholder="Podcast ID (e.g. a1b2c3d4)" required>
+        <button type="submit" class="btn primary">Connect</button>
+      </form>
+      <div id="connection-status"></div>
+    </div>
+
+    <div id="transcript-view" class="view hidden">
+      <div class="panel-header">
+        <span id="podcast-title" class="podcast-title">Transcribing...</span>
+        <button class="btn subtle" id="disconnect-btn">Disconnect</button>
+      </div>
+
+      <div class="status-bar" id="status-bar">
+        <span class="status-dot live"></span> Connected - receiving data
+      </div>
+
+      <div class="transcript-container" id="transcript-container">
+        <div id="transcript-log"></div>
+      </div>
+
+      <div id="summary-section" class="section hidden">
+        <h3>Summary</h3>
+        <div id="summary-content"></div>
+      </div>
+
+      <div id="chapters-section" class="section hidden">
+        <h3>Chapters</h3>
+        <ul id="chapters-list"></ul>
+      </div>
+
+      <div id="moments-section" class="section hidden">
+        <h3>Key Moments</h3>
+        <ul id="moments-list"></ul>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="panel.js"></script>
+</body>
+</html>
